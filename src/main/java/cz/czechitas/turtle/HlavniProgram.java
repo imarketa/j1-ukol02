@@ -13,25 +13,43 @@ public class HlavniProgram {
 
         Turtle leonardo = new Turtle();
         leonardo.setPenColor(Color.black);
-
+/*
         zofka.turnRight(90);
         zofka.setLocation(100, 100);
         nakresliRovnostrannyTrojuhelnik(zofka);
 
         zofka.setLocation(100, 200);
-        nakresliCtverec(zofka,100.0);
+        nakresliCtverec(zofka, 100.0);
 
         zofka.setLocation(100, 400);
-        nakresliKolecko(zofka);
+        nakresliKolecko(zofka, 20);
 
         zofka.setLocation(100, 600);
         nakresliObdelnik(zofka, 60.0, 120.0);
+*/
+        nakresliKornout(leonardo,150);
+        leonardo.setPenColor(Color.PINK);
+        nakresliKolecko (leonardo,90);
     }
-
-    private void nakresliKolecko(Turtle zofka) {
+    private void nakresliKornout(Turtle leonardo,double velikostKornoutu){
+            leonardo.setLocation(300, 300);
+            leonardo.turnRight(75);
+            nakresliRovnoramennyTrojuhelnik(leonardo,velikostKornoutu,30.00);
+            leonardo.setPenColor(Color.GRAY);
+    }
+    private void nakresliKopecek(Turtle leonardo, double velikostKopecku, int i){
+        leonardo.setLocation(300,250);
         int pocetStran = 24;
         double uhel = 360.0 / pocetStran;
-        for (int i = 0; i < 24; i++) {
+        for (i = 0; i < 14; i++) {
+            leonardo.move(13);
+            leonardo.turnRight(uhel);
+        }
+    }
+    private void nakresliKolecko(Turtle zofka, int i) {
+        int pocetStran = 24;
+        double uhel = 360.0 / pocetStran;
+        for (i = 0; i < 24; i++) {
             zofka.move(13);
             zofka.turnRight(uhel);
         }
