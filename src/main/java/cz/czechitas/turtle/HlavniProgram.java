@@ -39,9 +39,13 @@ public class HlavniProgram {
         zofka.setLocation(800, 600);
         nakresliSnehulaka(zofka);
 
-        //kreslím vlak
         zofka.setLocation(1300, 740);
         zofka.setPenColor(Color.black);
+        nakresliVlak(zofka);
+
+    }
+
+    private void nakresliVlak(Turtle zofka) {
         nakresliObdelnik(zofka, 160.0, 240.0);
         zofka.turnLeft(90);
         //lezici obdelnik
@@ -58,7 +62,6 @@ public class HlavniProgram {
 
         zofka.setX(960);
         nakresliRovnoramennyTrojuhelnik(zofka,120,90);
-
     }
 
     private void nakresliSnehulaka(Turtle zofka) {
