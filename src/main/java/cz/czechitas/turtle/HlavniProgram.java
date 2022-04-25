@@ -40,33 +40,24 @@ public class HlavniProgram {
         nakresliSnehulaka(zofka);
 
         //kreslím vlak
-        zofka.setLocation(1300, 500);
+        zofka.setLocation(1300, 740);
         zofka.setPenColor(Color.black);
-        zofka.turnRight(90);
         nakresliObdelnik(zofka, 160.0, 240.0);
-        zofka.turnRight(90);
-
+        zofka.turnLeft(90);
         //lezici obdelnik
-        zofka.move(120);
         nakresliObdelnik(zofka, 120.0, 220.0);
-
         //velke kolo
-        zofka.setLocation(1440, 820);
-        zofka.turnRight(58);
+        zofka.setLocation(1460, 740);
         nakresliKolecko(zofka, 22);
-        zofka.penUp();
-        zofka.turnRight(20);
-        zofka.move(50);
-        zofka.penDown();
-
         //male kola
         zofka.setLocation(1250, 770);
-        zofka.turnLeft(40);
         nakresliKolecko(zofka, 8);
 
         zofka.setLocation(1150, 770);
-        zofka.turnLeft(60);
         nakresliKolecko(zofka, 8);
+
+        zofka.setX(960);
+        nakresliRovnoramennyTrojuhelnik(zofka,120,90);
 
     }
 
